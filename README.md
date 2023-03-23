@@ -8,10 +8,10 @@ It displays top news articles from various categories
 </ul>
 <p>Install dependencies</p>
 <pre>
-<clipboard-copy>npm install</clipboard-copy>
+npm install
 </pre>
 <p>Start the server</p>
 
 <pre>
-<clipboard-copy>npm run dev</clipboard-copy>
+npm run dev
 </pre>
