@@ -30,9 +30,9 @@ export const Feed = ({ articles, pageNumber }) => {
         </div>
         <div>#{pageNumber}</div>
         <div
-          className={pageNumber === 100 ? styles.disabled : styles.active}
+          className={pageNumber === 40 ? styles.disabled : styles.active}
           onClick={() => {
-            if (pageNumber < 100) {
+            if (pageNumber < 40) {
               router.push(`/${pageNumber + 1}`)
             }
           }}
@@ -46,7 +46,7 @@ export const Feed = ({ articles, pageNumber }) => {
 
 export const getServerSideProps = async pageContext => {
     const pageNumber = pageContext.query.id;
- if (!pageNumber || pageNumber < 1 || pageNumber > 100) {
+ if (!pageNumber || pageNumber < 1 || pageNumber > 40) {
         return {
              props: {
                  articles: [],
@@ -55,7 +55,7 @@ export const getServerSideProps = async pageContext => {
          };
      }
 const apiResponse = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=in&us&category=business&entertainment&sports&technology&pageSize=10`,
+        `https://newsapi.org/v2/top-headlines?country=in&us&category=business&entertainment&sports&pageSize=10`,
         {
             headers: {
                 Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,
