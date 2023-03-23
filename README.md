@@ -6,10 +6,12 @@ It displays top news articles from various categories
   <li>Top news articles from various categories</li>
   <li>Pagination</li>
 </ul>
-<p>Install dependencies</p.
-
+<p>Install dependencies</p>
+<pre>
 <clipboard-copy>npm install</clipboard-copy>
-
+</pre>
 <p>Start the server</p>
 
+<pre>
 <clipboard-copy>npm run dev</clipboard-copy>
+</pre>
