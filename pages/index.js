@@ -1,6 +1,5 @@
 import styles from '../styles/Feed.module.css';
 import { useRouter } from 'next/router';
-import { NoFallbackError } from 'next/dist/server/base-server';
 
 export const Feed = ({ articles, pageNumber }) => {
   const router = useRouter();
